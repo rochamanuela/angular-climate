@@ -1,0 +1,8 @@
+<!-- home page -->
+
+<form [formGroup]="dataCity" (ngSubmit)="submit()">
+	<p>Qual a cidade que deseja consultar o clima para os próximos dias?</p>
+	<input type="text" [formControl]="dataCity.controls.cityName" />
+
+	<button type="submit">Consultar</button>
+</form>
