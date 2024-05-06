@@ -33,5 +33,7 @@ export class HomeComponent{
           console.log(data);
         });
     }
+
+    // agora só falta retornar esses dados obtidos para o usuário e ajustar as estilizações
   }
 }
