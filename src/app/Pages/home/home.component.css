@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #fff;
+    font-family: 'Poppins', sans-serif;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 8px;
+    padding: 25px;
+}
+
+header h1 {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 26px;
+    line-height: 42px;
+    color: #1C1B1F;
+}
+
+/* styles for input */
+
+input {
+    border-radius: 10px;
+    border: 2px solid #ebebeb;
+    background-color: #FFF;
+    font-family: 'Poppins';
+    font-size: 14px;
+    transition: .5s;
+    width: 600px;
+}
+
+input {
+    padding: 0 18px;
+    height: 50px;
+    outline: none;
+}
+
+input::placeholder {
+    color: #B5B5B5;
+}
+
+input:focus {
+    border: 2px solid #1C1B1F;
+}
+
+button[type="submit"] {
+    border: none;
+    background: transparent;
+    height: auto;
+    cursor: pointer;
+    margin-left: -42px;
+}
+
+form {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.container-result {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    width: 600px;
+    margin: auto;
+}
+
+.container-child {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.child-1 {
+    background-color: #F8F8F8;
+    padding: 50px 40px;
+    border-radius: 10px;
+}
+
+p.city-name {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 45px;
+    color: #000;
+}
+
+h1.temperature {
+    font-style: normal;
+    font-weight: 300;
+    font-size: 70px;
+    line-height: 105px;
+    color: #000;
+}
+
+p.description {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #000;
+}
+
+p.temperature-range {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 18px;
+    color: #000;
+}
+
+main {
+    height: calc(100vh - 100px);
+}
+
+footer {
+    bottom: 0;
+    background-color: #1C1B1F;
+    color: #fff;
+    height: 100px;
+}
