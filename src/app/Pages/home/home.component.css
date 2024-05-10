@@ -8,8 +8,13 @@
     padding: 0;
 }
 
-body {
+body,
+.body {
     background-color: #fff;
+    font-family: 'Poppins', sans-serif;
+}
+
+.font-poppins {
     font-family: 'Poppins', sans-serif;
 }
 
@@ -28,6 +33,7 @@ header h1 {
     font-size: 26px;
     line-height: 42px;
     color: #1C1B1F;
+    font-family: 'Poppins', sans-serif;
 }
 
 /* styles for input */
@@ -40,6 +46,7 @@ input {
     font-size: 14px;
     transition: .5s;
     width: 600px;
+    font-family: 'Poppins', sans-serif;
 }
 
 input {
@@ -64,7 +71,7 @@ button[type="submit"] {
     margin-left: -42px;
 }
 
-form {
+.form {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -77,8 +84,9 @@ form {
     align-items: center;
     justify-content: center;
 
-    width: 600px;
-    margin: auto;
+    width: 640px;
+    margin: 0 auto;
+    gap: 15px;
 }
 
 .container-child {
@@ -86,12 +94,31 @@ form {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+
+    margin-top: 30px;
 }
 
 .child-1 {
     background-color: #F8F8F8;
-    padding: 50px 40px;
+    width: 50%;
+    height: 300px;
     border-radius: 10px;
+}
+
+.child-2 {
+    gap: 15px;
+}
+
+.sub-container {
+    background: #EAF2FF;
+    border-radius: 10px;
+    width: 200px;
+    height: 100px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 p.city-name {
@@ -135,4 +162,20 @@ footer {
     background-color: #1C1B1F;
     color: #fff;
     height: 100px;
+}
+
+.sub-container p {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 18px;
+    color: #234988;
+}
+
+.sub-container h2 {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 42px;
+    color: #000000;
 }

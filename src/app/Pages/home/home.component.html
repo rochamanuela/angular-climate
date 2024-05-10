@@ -1,50 +1,35 @@
 <!-- home page -->
 
-<main>
-	<header>
-		<span class="material-symbols-outlined">foggy</span>
-		<h1>Weather</h1>
-	</header>
+<header>
+	<span class="material-symbols-outlined">foggy</span>
+	<h1>Weather</h1>
+</header>
 
-	<!-- formulário que está funcionando -->
-	<div>
-		<input type="text" [(ngModel)]="cityName" placeholder="Pesquise por Campinas, Monte Mor..." />
-		<button type="submit" (click)="onSubmit()">
-			<span class="material-symbols-outlined">
-				search
-			</span>
-		</button>
+<!-- formulário que está funcionando -->
+<div class="form">
+	<input type="text" [(ngModel)]="cityName" placeholder="Pesquise por Campinas, Monte Mor..." />
+	<button type="submit" (click)="onSubmit()">
+		<span class="material-symbols-outlined">
+			search
+		</span>
+	</button>
+</div>
+
+<div class="container-result">
+	<div class="container-child child-1">
+		<p class="city-name font-poppins">{{ climate.name || "Campinas" }}</p>
+		<h1 class="temperature font-poppins">{{ climate.temp || 32 }}°</h1>
+		<p class="description font-poppins">{{ climate.description || "ensolarado" }}</p>
+		<p class="temperature-range font-poppins">min. {{ climate.temp_min || 15 }}°  max. {{ climate.temp_max || 32 }}°</p>
 	</div>
-
-	<div class="container-result">
-		<div class="container-child child-1">
-			<p class="city-name">{{ cityData.name }}</p>
-			<h1 class="temperature">{{ cityData.temp }}</h1>
-			<p class="description">nublado</p>
-			<p class="temperature-range">min. 15° max. 32°</p>
+	<div class="container-child child-2">
+		<div class="sub-container">
+			<p class="font-poppins">sensação térmica</p>
+			<h2 class="font-poppins">{{ climate.feels_like || 32 }}°</h2>
 		</div>
-		<div class="container-child child-2">
-			<div class="sub-container">
-				<p>sensação térmica</p>
-				<h2>32°</h2>
-			</div>
-			<div class="sub-container">
-				<p>umidade do ar</p>
-				<h2>31%</h2>
-
-			</div>
-		</div>
-		<div class="container-child child-3">
-			<iframe
-				src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d117358.89756550858!2d-46.9067009!3d-23.18969855!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cf24293cc00531%3A0xf686a1c1163c6bbb!2zSnVuZGlhw60gLSBBZ2xvbWVyYcOnw6NvIFVyYmFuYSBkZSBKdW5kaWHDrSwgSnVuZGlhw60gLSBTUA!5e0!3m2!1spt-BR!2sbr!4v1715281510630!5m2!1spt-BR!2sbr"
-				width="370" height="250" style="border:0;border-radius: 10px;" allowfullscreen="" loading="lazy"
-				referrerpolicy="no-referrer-when-downgrade"></iframe>
+		<div class="sub-container">
+			<p class="font-poppins">umidade do ar</p>
+			<h2 class="font-poppins">{{ climate.humidity || 31 }}%</h2>
 		</div>
 	</div>
-</main>
-
-<footer>
-	<p>Trilha de Desenvolvimento Front End</p>
-	<p>Digital Solutions CaP/ETS</p>
-	<p>Manuela Souza</p>
-</footer>
+</div>
