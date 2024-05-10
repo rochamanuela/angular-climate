@@ -1,70 +1,50 @@
 <!-- home page -->
 
-<!DOCTYPE html>
-<html lang="en">
+<main>
+	<header>
+		<span class="material-symbols-outlined">foggy</span>
+		<h1>Weather</h1>
+	</header>
 
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="home.component.css">
-	<title>Document</title>
+	<!-- formulário que está funcionando -->
+	<div>
+		<input type="text" [(ngModel)]="cityName" placeholder="Pesquise por Campinas, Monte Mor..." />
+		<button type="submit" (click)="onSubmit()">
+			<span class="material-symbols-outlined">
+				search
+			</span>
+		</button>
+	</div>
 
-	<link rel="stylesheet"
-		href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
-	<link rel="stylesheet"
-		href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@40,300,1,0" />
-</head>
-
-<body>
-	<main>
-		<header>
-			<span class="material-symbols-outlined">foggy</span>
-			<h1>Weather</h1>
-		</header>
-
-		<!-- formulário que está funcionando -->
-		<form [formGroup]="dataCity" (ngSubmit)="submit()">
-			<input type="text" [formControl]="dataCity.controls.cityName"
-				placeholder="Pesquise por Campinas, Monte Mor..." />
-
-			<button type="submit">
-				<span class="material-symbols-outlined">
-					search
-				</span>
-			</button>
-		</form>
-
-		<div class="container-result">
-			<div class="container-child child-1">
-				<p class="city-name">Jundiaí</p>
-				<h1 class="temperature">30°</h1>
-				<p class="description">nublado</p>
-				<p class="temperature-range">min. 15° max. 32°</p>
+	<div class="container-result">
+		<div class="container-child child-1">
+			<p class="city-name">{{ cityData.name }}</p>
+			<h1 class="temperature">{{ cityData.temp }}</h1>
+			<p class="description">nublado</p>
+			<p class="temperature-range">min. 15° max. 32°</p>
+		</div>
+		<div class="container-child child-2">
+			<div class="sub-container">
+				<p>sensação térmica</p>
+				<h2>32°</h2>
 			</div>
-			<div class="container-child child-2">
-				<div class="sub-container">
-					<p>sensação térmica</p>
-					<h2>32°</h2>
-				</div>
-				<div class="sub-container">
-					<p>umidade do ar</p>
-					<h2>31%</h2>
-				</div>
-			</div>
-			<div class="container-child child-3">
-				<iframe
-					src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d117358.89756550858!2d-46.9067009!3d-23.18969855!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cf24293cc00531%3A0xf686a1c1163c6bbb!2zSnVuZGlhw60gLSBBZ2xvbWVyYcOnw6NvIFVyYmFuYSBkZSBKdW5kaWHDrSwgSnVuZGlhw60gLSBTUA!5e0!3m2!1spt-BR!2sbr!4v1715281510630!5m2!1spt-BR!2sbr"
-					width="370" height="250" style="border:0;border-radius: 10px;" allowfullscreen="" loading="lazy"
-					referrerpolicy="no-referrer-when-downgrade"></iframe>
+			<div class="sub-container">
+				<p>umidade do ar</p>
+				<h2>31%</h2>
+
 			</div>
 		</div>
-	</main>
+		<div class="container-child child-3">
+			<iframe
+				src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d117358.89756550858!2d-46.9067009!3d-23.18969855!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cf24293cc00531%3A0xf686a1c1163c6bbb!2zSnVuZGlhw60gLSBBZ2xvbWVyYcOnw6NvIFVyYmFuYSBkZSBKdW5kaWHDrSwgSnVuZGlhw60gLSBTUA!5e0!3m2!1spt-BR!2sbr!4v1715281510630!5m2!1spt-BR!2sbr"
+				width="370" height="250" style="border:0;border-radius: 10px;" allowfullscreen="" loading="lazy"
+				referrerpolicy="no-referrer-when-downgrade"></iframe>
+		</div>
+	</div>
+</main>
 
-	<footer>
-		<p>Trilha de Desenvolvimento Front End</p>
-		<p>Digital Solutions CaP/ETS</p>
-		<p>Manuela Souza</p>
-	</footer>
-</body>
-
-</html>
+<footer>
+	<p>Trilha de Desenvolvimento Front End</p>
+	<p>Digital Solutions CaP/ETS</p>
+	<p>Manuela Souza</p>
+</footer>

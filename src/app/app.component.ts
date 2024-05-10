@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { HomeComponent } from './Pages/home/home.component';
-import { ClimateServiceService } from './Services/climate-service.service';
+import { ClimateService } from './Services/climate-service.service';
 
 @Component({
   selector: 'app-root',
@@ -14,7 +14,7 @@ export class AppComponent {
   title = 'angular-climate';
   weatherData: any;
 
-  constructor(private climateService: ClimateServiceService) {}
+  constructor(private climateService: ClimateService) {}
 
   ngOnInit() {
     this.getWeather();
